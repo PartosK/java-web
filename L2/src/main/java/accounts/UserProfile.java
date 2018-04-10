@@ -9,18 +9,18 @@ package accounts;
  */
 public class UserProfile {
     private final String login;
-    private final String pass;
+    private final String password;
     private final String email;
 
-    public UserProfile(String login, String pass, String email) {
+  /*  public UserProfile(String login, String pass, String email) {
         this.login = login;
-        this.pass = pass;
+        this.password = pass;
         this.email = email;
-    }
+    }*/
 
     public UserProfile(String login) {
         this.login = login;
-        this.pass = login;
+        this.password = login;
         this.email = login;
     }
 
@@ -28,8 +28,8 @@ public class UserProfile {
         return login;
     }
 
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return password;
     }
 
     public String getEmail() {
