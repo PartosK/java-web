@@ -24,8 +24,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
         AccountService accountService = new AccountService();
 
-        accountService.addNewUser(new UserProfile("admin"));
-        accountService.addNewUser(new UserProfile("test"));
+        accountService.addNewUser(new UserProfile("admin","admin"));
+        accountService.addNewUser(new UserProfile("test", "test"));
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(new ServletHolder(new UsersServlet(accountService)), "/api/v1/users");
@@ -43,7 +43,7 @@ public class Main {
         server.setHandler(handlers);
 
         server.start();
-        java.util.logging.Logger.getGlobal().info("Server started");
+        System.out.println("Server started");
         server.join();
     }
 }

@@ -18,9 +18,9 @@ public class UserProfile {
         this.email = email;
     }*/
 
-    public UserProfile(String login) {
+    public UserProfile(String login, String password) {
         this.login = login;
-        this.password = login;
+        this.password = password;
         this.email = login;
     }
 
